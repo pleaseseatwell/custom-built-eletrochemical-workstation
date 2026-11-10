@@ -39,6 +39,9 @@ SPE丝网印刷电极将三电极集成到一张小小的纸片之上，小巧�
 
 
 # 器件搭建：
+
+V1.0 定性阶段
+
 器件核心元件以树莓派PICO作为核心绘制器，INA1115作为电压检测器（ADS），MCP4725作为电压产生器（DAC），使用HW-131作为外部电源模块（个人对PICO的供电能力和供电稳定性表示质疑），使用OP297作为运放部件，使用AD825TIA模块作为微小电流检测器（此处也可以自行搭建运放，但难度较大）
 
 <img width="776" height="417" alt="image" src="https://github.com/user-attachments/assets/35324f0f-cbd2-4e8e-8153-0a12d49854ca" />
@@ -51,4 +54,6 @@ SPE丝网印刷电极将三电极集成到一张小小的纸片之上，小巧�
 <img width="4096" height="3072" alt="IMG_20261102_224847" src="https://github.com/user-attachments/assets/230afc6a-d631-4b77-859f-7d1c8e28e654" />
 <img width="3072" height="4096" alt="1793513490033" src="https://github.com/user-attachments/assets/835419d0-4a3a-4cba-bf6c-f14339ca4d7f" />
 <img width="4096" height="3072" alt="IMG_20261102_230113" src="https://github.com/user-attachments/assets/ae8be28c-e2eb-4de2-88c2-26a88c63316d" />
+
+使用SPCE和5M铁氰化钾溶液，对其施加恒定的正负小电压，并将AD825的输出接到示波器上，可以观察随时间的变化，电压随时间的平方倒数而变化，呈现出典型的I-T图像（AD825将电流转换为电压，其输出电压的变化与电流的变化成比例关系），这表示着构建的电化学检测电路已经实现了电化学检测的电位控制，电流检测的功能，实现了定性检测。
 
