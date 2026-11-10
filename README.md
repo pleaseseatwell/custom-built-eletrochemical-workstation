@@ -42,6 +42,13 @@ SPE丝网印刷电极将三电极集成到一张小小的纸片之上，小巧�
 器件核心元件以树莓派PICO作为核心绘制器，INA1115作为电压检测器（ADS），MCP4725作为电压产生器（DAC），使用HW-131作为外部电源模块（个人对PICO的供电能力和供电稳定性表示质疑），使用OP297作为运放部件，使用AD825TIA模块作为微小电流检测器（此处也可以自行搭建运放，但难度较大）
 
 <img width="776" height="417" alt="image" src="https://github.com/user-attachments/assets/35324f0f-cbd2-4e8e-8153-0a12d49854ca" />
+
 对于原SAKANA项目进行了删改，首先使用AD825模块代替了TIA运放功能和INA219的电压检测功能，因为在实测中发现它们的稳定性不好，且不好操作。而AD825模块作为反向跨阻放大器，其本身便可以将微量电流转化为反向放大的可测量大电压，简化了电路，增强了可维护性。
 
 而且针对SAKANA项目单使用PICO供电，发现PICO供电能力优先，且供电电压不稳，引入外部电源，将PICO的GND与外部电源的GND通过一根短导线相连（只连接一次）
+
+<img width="4096" height="3072" alt="IMG_20261102_225352" src="https://github.com/user-attachments/assets/6b02059b-b1b5-48e6-a3b3-a5d6c61eba87" />
+<img width="4096" height="3072" alt="IMG_20261102_224847" src="https://github.com/user-attachments/assets/230afc6a-d631-4b77-859f-7d1c8e28e654" />
+<img width="3072" height="4096" alt="1793513490033" src="https://github.com/user-attachments/assets/835419d0-4a3a-4cba-bf6c-f14339ca4d7f" />
+<img width="4096" height="3072" alt="IMG_20261102_230113" src="https://github.com/user-attachments/assets/ae8be28c-e2eb-4de2-88c2-26a88c63316d" />
+
